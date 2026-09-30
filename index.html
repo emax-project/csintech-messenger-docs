@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CSIN-Tech 메신저 가이드</title>
-<meta name="description" content="CSIN-Tech 메신저 설치·유지보수 가이드와 사용자 가이드를 한 곳에서 확인하세요." />
+<meta name="description" content="CSIN-Tech 메신저 사용자 가이드 — 설치부터 조직도·대화·쪽지·일정 사용법까지." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;450;600;650&display=swap" rel="stylesheet" />
@@ -18,7 +18,7 @@
     <div class="nav-links">
       <a href="#features">주요 기능</a>
       <a href="#install">설치</a>
-      <a href="#admin">운영·유지보수</a>
+      <a href="#admin">관리자 기능</a>
       <a class="btn btn-primary" href="user-guide.html">사용자 가이드</a>
     </div>
   </div>
@@ -34,7 +34,7 @@
     </p>
     <div class="cta-row">
       <a class="btn btn-primary" href="user-guide.html">사용자 가이드 보기</a>
-      <a class="btn btn-outline" href="install-guide.html">설치·유지보수 가이드 보기</a>
+      <a class="btn btn-outline" href="#install">설치 방법 보기</a>
     </div>
   </div>
 
@@ -142,36 +142,6 @@
 <section id="admin">
   <div class="wrap">
     <div class="section-head">
-      <h2 class="section-title">운영·유지보수 한눈에 보기</h2>
-      <p class="section-sub">서버 설치, 클라이언트 배포, 자동 업데이트, 장애 대응까지 정리했습니다.</p>
-    </div>
-    <div class="grid">
-      <div class="card text-only"><div class="body">
-        <h3>서버 (API + PostgreSQL)</h3>
-        <p>Docker Compose로 DB·API 서버를 한 번에 실행합니다. LDAP 연동, 거래처 조직 동기화 등 선택 기능을 지원합니다.</p>
-      </div></div>
-      <div class="card text-only"><div class="body">
-        <h3>클라이언트 빌드·배포</h3>
-        <p>macOS(.dmg)/Windows(.exe) 설치 파일을 빌드해 GitHub Releases로 배포합니다. 설치된 앱은 자동으로 최신 버전을 내려받습니다.</p>
-      </div></div>
-      <div class="card text-only"><div class="body">
-        <h3>사용자·조직 관리</h3>
-        <p>관리자 계정은 설정 패널에서 사용자 등록, 부서·직급 관리, 비밀번호 초기화를 바로 처리할 수 있습니다.</p>
-      </div></div>
-      <div class="card text-only"><div class="body">
-        <h3>장애 대응</h3>
-        <p>흰 화면, 알림 미수신, DB 연결 오류 등 자주 발생하는 문제와 점검 방법을 정리했습니다.</p>
-      </div></div>
-    </div>
-    <div class="cta-row" style="margin-top:28px; justify-content:flex-start;">
-      <a class="btn btn-primary" href="install-guide.html">설치·유지보수 가이드 전체 보기</a>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="section-head">
       <h2 class="section-title">관리자 화면 미리보기</h2>
       <p class="section-sub">관리자 계정으로 로그인하면 설정 패널 안에 조직·사용자 관리 도구가 나타납니다. 탭을 눌러 화면을 바꿔보세요.</p>
     </div>
@@ -205,13 +175,13 @@
   </div>
 </section>
 
-<section>
+<section class="alt">
   <div class="wrap">
     <div class="section-head">
       <h2 class="section-title">가이드 문서</h2>
-      <p class="section-sub">더 자세한 내용은 아래 두 가이드에서 확인하세요.</p>
+      <p class="section-sub">아래 사용자 가이드에서 전체 내용을 확인하세요.</p>
     </div>
-    <div class="guide-cards">
+    <div class="guide-cards guide-cards-single">
       <div class="guide-card">
         <span class="tag">직원용</span>
         <h3>사용자 가이드</h3>
@@ -219,26 +189,16 @@
           <li>설치 및 로그인</li>
           <li>조직도 · 대화 · 쪽지 · 일정 · 메모장</li>
           <li>알림(멘션 · 공지), 환경설정</li>
+          <li>조직/계정 관리하기 (관리자 전용)</li>
           <li>자주 묻는 질문(FAQ)</li>
         </ul>
         <a class="btn btn-primary go" href="user-guide.html">전체 가이드 보기</a>
-      </div>
-      <div class="guide-card">
-        <span class="tag">관리자용</span>
-        <h3>설치 · 유지보수 가이드</h3>
-        <ul>
-          <li>서버 최초 설치 및 환경 변수</li>
-          <li>클라이언트 빌드 · 배포 · 자동 업데이트</li>
-          <li>정기 유지보수 명령어</li>
-          <li>트러블슈팅 체크리스트</li>
-        </ul>
-        <a class="btn btn-outline go" href="install-guide.html">전체 가이드 보기</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section>
   <div class="wrap">
     <div class="section-head">
       <h2 class="section-title">자주 묻는 질문</h2>
@@ -273,13 +233,12 @@
       <div class="links">
         <span class="link-group-title">가이드</span>
         <a href="user-guide.html">사용자 가이드</a>
-        <a href="install-guide.html">유지보수 가이드</a>
       </div>
       <div class="links">
         <span class="link-group-title">바로가기</span>
         <a href="#features">주요 기능</a>
         <a href="#install">설치</a>
-        <a href="#admin">운영·유지보수</a>
+        <a href="#admin">관리자 기능</a>
       </div>
       <div class="links">
         <span class="link-group-title">정보</span>
