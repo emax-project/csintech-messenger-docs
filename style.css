@@ -1,0 +1,356 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0b1220;
+  --bg-soft: #111a2e;
+  --card: #151f38;
+  --card-border: #24304d;
+  --text: #e7ecf6;
+  --text-dim: #9fb0cc;
+  --brand: #4f7cff;
+  --brand-2: #7c5cff;
+  --accent-bg: rgba(79, 124, 255, 0.12);
+  --radius: 16px;
+  --maxw: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo",
+    "Segoe UI", Roboto, "Malgun Gothic", sans-serif;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; }
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(11, 18, 32, 0.85);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--card-border);
+}
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 14px;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+}
+.nav-brand .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+}
+.nav-links { display: flex; gap: 22px; font-size: 14px; }
+.nav-links a { color: var(--text-dim); }
+.nav-links a:hover { color: var(--text); text-decoration: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 72px 0 56px;
+  text-align: center;
+  background:
+    radial-gradient(60% 50% at 50% -10%, rgba(79, 124, 255, 0.25), transparent 60%);
+}
+.hero .eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--brand);
+  background: var(--accent-bg);
+  border: 1px solid rgba(79, 124, 255, 0.3);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+.hero p.lead {
+  color: var(--text-dim);
+  font-size: clamp(15px, 2vw, 18px);
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+.cta-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #fff;
+}
+.btn-primary:hover { text-decoration: none; filter: brightness(1.08); }
+.btn-ghost {
+  background: transparent;
+  border-color: var(--card-border);
+  color: var(--text);
+}
+.btn-ghost:hover { text-decoration: none; border-color: var(--brand); }
+
+/* ---------- Sections ---------- */
+section { padding: 56px 0; }
+section.alt { background: var(--bg-soft); }
+h2.section-title {
+  font-size: clamp(22px, 3vw, 28px);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+p.section-sub {
+  color: var(--text-dim);
+  margin: 0 0 32px;
+  max-width: 640px;
+}
+
+/* ---------- Feature grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card .shot {
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: #0c1424;
+  border-bottom: 1px solid var(--card-border);
+}
+.card .shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+}
+.card .body { padding: 16px 18px 20px; }
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.card p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+
+/* ---------- Guide cards (large CTA) ---------- */
+.guide-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.guide-card {
+  background: linear-gradient(180deg, var(--card), var(--bg-soft));
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.guide-card .tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: 0.04em;
+}
+.guide-card h3 { margin: 0; font-size: 20px; }
+.guide-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-dim);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.guide-card .go {
+  margin-top: auto;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ---------- Steps ---------- */
+.steps {
+  display: grid;
+  gap: 14px;
+}
+.step {
+  display: flex;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.step .num {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 13px;
+  display: flex; align-items: center; justify-content: center;
+}
+.step .txt { font-size: 14px; color: var(--text-dim); }
+.step .txt b { color: var(--text); }
+.step code {
+  background: #0c1424;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 12.5px;
+  color: #ffd479;
+}
+
+.note {
+  margin-top: 16px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+  background: rgba(255, 212, 121, 0.08);
+  border: 1px solid rgba(255, 212, 121, 0.25);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+.note b { color: #ffd479; }
+
+/* ---------- Screenshot gallery ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+.gallery figure {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.gallery img { display: block; width: 100%; }
+.gallery figcaption {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  padding: 8px 12px 12px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--card-border);
+  padding: 32px 0 60px;
+  color: var(--text-dim);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+}
+
+/* ---------- Markdown viewer page ---------- */
+body.viewer .wrap.doc {
+  max-width: 780px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.doc-content h1 { font-size: 28px; margin-top: 0; }
+.doc-content h2 {
+  font-size: 20px;
+  margin-top: 40px;
+  padding-top: 8px;
+  border-top: 1px solid var(--card-border);
+}
+.doc-content h3 { font-size: 16px; margin-top: 28px; }
+.doc-content p, .doc-content li { color: var(--text-dim); font-size: 15px; }
+.doc-content code {
+  background: #0c1424;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 13px;
+  color: #ffd479;
+}
+.doc-content pre {
+  background: #0c1424;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+.doc-content pre code { border: none; padding: 0; background: none; }
+.doc-content blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--brand);
+  background: var(--accent-bg);
+  border-radius: 0 10px 10px 0;
+  color: var(--text-dim);
+}
+.doc-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 16px 0;
+}
+.doc-content th, .doc-content td {
+  border: 1px solid var(--card-border);
+  padding: 8px 10px;
+  text-align: left;
+}
+.doc-content th { background: var(--card); }
+.doc-content img {
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  margin: 10px 0;
+}
+.doc-content hr { border-color: var(--card-border); margin: 32px 0; }
+.doc-loading { color: var(--text-dim); padding: 40px 0; }
+.back-link { display: inline-block; margin-bottom: 20px; font-size: 14px; }
