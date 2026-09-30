@@ -38,22 +38,8 @@
     </div>
   </div>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track" id="marquee-track">
-      <img src="docs/images/user-guide/orgchart.png" alt="" />
-      <img src="docs/images/user-guide/chatroom.png" alt="" />
-      <img src="docs/images/user-guide/notifications-mention.png" alt="" />
-      <img src="docs/images/user-guide/schedule-panel.png" alt="" />
-      <img src="docs/images/user-guide/memo-panel.png" alt="" />
-      <img src="docs/images/user-guide/settings-panel.png" alt="" />
-      <!-- duplicated for seamless loop -->
-      <img src="docs/images/user-guide/orgchart.png" alt="" />
-      <img src="docs/images/user-guide/chatroom.png" alt="" />
-      <img src="docs/images/user-guide/notifications-mention.png" alt="" />
-      <img src="docs/images/user-guide/schedule-panel.png" alt="" />
-      <img src="docs/images/user-guide/memo-panel.png" alt="" />
-      <img src="docs/images/user-guide/settings-panel.png" alt="" />
-    </div>
+  <div class="hero-shot">
+    <div class="frame"><img src="docs/images/user-guide/orgchart-members.png" alt="조직도 화면" /></div>
   </div>
 </header>
 
@@ -66,7 +52,7 @@
     <div class="bento">
 
       <div class="card feature-lg">
-        <div class="shot"><img src="docs/images/user-guide/orgchart-members.png" alt="조직도" /></div>
+        <div class="shot shot-fade"><img src="docs/images/user-guide/orgchart-members.png" alt="조직도" /></div>
         <div class="body">
           <h3>조직도</h3>
           <p>부서 트리에서 동료를 검색하고, 더블클릭으로 바로 대화를 시작합니다. "온라인"만 모아보는 필터도 지원합니다.</p>
@@ -74,7 +60,7 @@
       </div>
 
       <div class="card feature-lg">
-        <div class="shot"><img src="docs/images/user-guide/chatroom.png" alt="대화" /></div>
+        <div class="shot shot-fade"><img src="docs/images/user-guide/chatroom.png" alt="대화" /></div>
         <div class="body">
           <h3>대화(채팅)</h3>
           <p>1:1·그룹 채팅, 파일 전송, @멘션을 지원합니다. 즐겨찾기·알림 끄기·폴더로 정리할 수 있습니다.</p>
@@ -82,7 +68,7 @@
       </div>
 
       <div class="card">
-        <div class="shot"><img src="docs/images/user-guide/notifications-mention.png" alt="알림" /></div>
+        <div class="shot shot-fade"><img src="docs/images/user-guide/notifications-mention.png" alt="알림" /></div>
         <div class="body">
           <h3>알림</h3>
           <p>멘션·공지를 한 곳에서 확인합니다.</p>
@@ -90,7 +76,7 @@
       </div>
 
       <div class="card">
-        <div class="shot"><img src="docs/images/user-guide/memo-panel.png" alt="쪽지" /></div>
+        <div class="shot shot-fade"><img src="docs/images/user-guide/memo-panel.png" alt="쪽지" /></div>
         <div class="body">
           <h3>쪽지</h3>
           <p>받은쪽지함·보낸쪽지함으로 관리합니다.</p>
@@ -98,7 +84,7 @@
       </div>
 
       <div class="card">
-        <div class="shot"><img src="docs/images/user-guide/schedule-panel.png" alt="일정" /></div>
+        <div class="shot shot-fade"><img src="docs/images/user-guide/schedule-panel.png" alt="일정" /></div>
         <div class="body">
           <h3>일정</h3>
           <p>일반·기간·반복 일정을 등록합니다.</p>
@@ -106,7 +92,7 @@
       </div>
 
       <div class="card">
-        <div class="shot"><img src="docs/images/user-guide/notepad-panel.png" alt="메모장" /></div>
+        <div class="shot shot-fade"><img src="docs/images/user-guide/notepad-panel.png" alt="메모장" /></div>
         <div class="body">
           <h3>메모장</h3>
           <p>입력 중 자동으로 저장됩니다.</p>
@@ -157,7 +143,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2 class="section-title">운영·유지보수 한눈에 보기</h2>
-      <p class="section-sub">서버 설치, 클라이언트 빌드·배포, 자동 업데이트, 장애 대응까지 관리자가 알아야 할 내용을 정리했습니다.</p>
+      <p class="section-sub">서버 설치, 클라이언트 배포, 자동 업데이트, 장애 대응까지 정리했습니다.</p>
     </div>
     <div class="grid">
       <div class="card text-only"><div class="body">
@@ -304,13 +290,6 @@
 </footer>
 
 <script>
-  // Seamless marquee: pause on hover for readability
-  var track = document.getElementById('marquee-track');
-  if (track) {
-    track.addEventListener('mouseenter', function () { track.style.animationPlayState = 'paused'; });
-    track.addEventListener('mouseleave', function () { track.style.animationPlayState = 'running'; });
-  }
-
   // Segmented control demo switcher
   var seg = document.getElementById('admin-seg');
   var panels = document.getElementById('admin-panels');
