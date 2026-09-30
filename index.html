@@ -37,6 +37,24 @@
       <a class="btn btn-outline" href="install-guide.html">설치·유지보수 가이드 보기</a>
     </div>
   </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track">
+      <img src="docs/images/user-guide/orgchart.png" alt="" />
+      <img src="docs/images/user-guide/chatroom.png" alt="" />
+      <img src="docs/images/user-guide/notifications-mention.png" alt="" />
+      <img src="docs/images/user-guide/schedule-panel.png" alt="" />
+      <img src="docs/images/user-guide/memo-panel.png" alt="" />
+      <img src="docs/images/user-guide/settings-panel.png" alt="" />
+      <!-- duplicated for seamless loop -->
+      <img src="docs/images/user-guide/orgchart.png" alt="" />
+      <img src="docs/images/user-guide/chatroom.png" alt="" />
+      <img src="docs/images/user-guide/notifications-mention.png" alt="" />
+      <img src="docs/images/user-guide/schedule-panel.png" alt="" />
+      <img src="docs/images/user-guide/memo-panel.png" alt="" />
+      <img src="docs/images/user-guide/settings-panel.png" alt="" />
+    </div>
+  </div>
 </header>
 
 <section id="features">
@@ -45,9 +63,9 @@
       <h2 class="section-title">주요 기능</h2>
       <p class="section-sub">로그인 후 왼쪽 사이드바에서 바로 접근할 수 있는 핵심 기능입니다.</p>
     </div>
-    <div class="grid">
+    <div class="bento">
 
-      <div class="card">
+      <div class="card feature-lg">
         <div class="shot"><img src="docs/images/user-guide/orgchart-members.png" alt="조직도" /></div>
         <div class="body">
           <h3>조직도</h3>
@@ -55,19 +73,19 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card feature-lg">
         <div class="shot"><img src="docs/images/user-guide/chatroom.png" alt="대화" /></div>
         <div class="body">
           <h3>대화(채팅)</h3>
-          <p>1:1·그룹 채팅, 파일 전송, @멘션을 지원합니다. 채팅방은 즐겨찾기·알림 끄기·폴더로 정리할 수 있습니다.</p>
+          <p>1:1·그룹 채팅, 파일 전송, @멘션을 지원합니다. 즐겨찾기·알림 끄기·폴더로 정리할 수 있습니다.</p>
         </div>
       </div>
 
       <div class="card">
         <div class="shot"><img src="docs/images/user-guide/notifications-mention.png" alt="알림" /></div>
         <div class="body">
-          <h3>알림 (멘션·공지)</h3>
-          <p>나를 멘션한 메시지와 관리자가 등록한 전체 공지를 한 곳에서 확인합니다.</p>
+          <h3>알림</h3>
+          <p>멘션·공지를 한 곳에서 확인합니다.</p>
         </div>
       </div>
 
@@ -75,7 +93,7 @@
         <div class="shot"><img src="docs/images/user-guide/memo-panel.png" alt="쪽지" /></div>
         <div class="body">
           <h3>쪽지</h3>
-          <p>대화방 이력 없이 간단히 주고받는 개별 메시지입니다. 받은쪽지함·보낸쪽지함으로 관리합니다.</p>
+          <p>받은쪽지함·보낸쪽지함으로 관리합니다.</p>
         </div>
       </div>
 
@@ -83,7 +101,7 @@
         <div class="shot"><img src="docs/images/user-guide/schedule-panel.png" alt="일정" /></div>
         <div class="body">
           <h3>일정</h3>
-          <p>캘린더에서 일반·기간·반복 일정을 등록하고 조회합니다.</p>
+          <p>일반·기간·반복 일정을 등록합니다.</p>
         </div>
       </div>
 
@@ -91,7 +109,7 @@
         <div class="shot"><img src="docs/images/user-guide/notepad-panel.png" alt="메모장" /></div>
         <div class="body">
           <h3>메모장</h3>
-          <p>나만 보는 개인 메모입니다. 입력 중 자동으로 저장됩니다.</p>
+          <p>입력 중 자동으로 저장됩니다.</p>
         </div>
       </div>
 
@@ -105,25 +123,32 @@
       <h2 class="section-title">설치하기</h2>
       <p class="section-sub">회사에서 안내한 다운로드 링크에서 설치 파일을 받아 실행하면 됩니다.</p>
     </div>
-    <div class="steps">
-      <div class="step">
-        <div class="num">1</div>
-        <div class="txt"><b>Mac</b> — <code>.dmg</code> 파일을 다운로드한 후 열어서 앱을 Applications 폴더로 드래그하세요.</div>
+    <div class="split">
+      <div>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <div class="txt"><b>Mac</b> — <code>.dmg</code> 파일을 다운로드한 후 열어서 앱을 Applications 폴더로 드래그하세요.</div>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <div class="txt"><b>Windows</b> — <code>Setup .exe</code> 파일을 다운로드한 후 실행해서 설치하세요. (일반 PC는 x64, Windows on ARM은 arm64)</div>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <div class="txt">설치 후 앱을 실행하면 로그인 화면이 나타납니다. 회사에서 안내한 계정으로 로그인하세요.</div>
+          </div>
+        </div>
+        <div class="note">
+          <b>macOS에서 "손상되었기 때문에 열 수 없습니다" 경고가 뜰 때</b><br />
+          아직 앱 서명이 적용되지 않아 나타나는 정상적인 경고입니다. 터미널에서
+          <code>xattr -cr /Applications/앱이름.app</code> 를 실행한 뒤 다시 실행하면 됩니다.
+          자세한 내용은 <a href="user-guide.html">사용자 가이드</a>를 참고하세요.
+        </div>
       </div>
-      <div class="step">
-        <div class="num">2</div>
-        <div class="txt"><b>Windows</b> — <code>Setup .exe</code> 파일을 다운로드한 후 실행해서 설치하세요. (일반 PC는 x64, Windows on ARM은 arm64)</div>
+      <div class="split-visual">
+        <div class="frame"><img src="docs/images/user-guide/login.png" alt="로그인 화면" /></div>
       </div>
-      <div class="step">
-        <div class="num">3</div>
-        <div class="txt">설치 후 앱을 실행하면 로그인 화면이 나타납니다. 회사에서 안내한 계정으로 로그인하세요.</div>
-      </div>
-    </div>
-    <div class="note">
-      <b>macOS에서 "손상되었기 때문에 열 수 없습니다" 경고가 뜰 때</b><br />
-      아직 앱 서명이 적용되지 않아 나타나는 정상적인 경고입니다. 터미널에서
-      <code>xattr -cr /Applications/앱이름.app</code> 를 실행한 뒤 다시 실행하면 됩니다.
-      자세한 내용은 <a href="user-guide.html">사용자 가이드</a>를 참고하세요.
     </div>
   </div>
 </section>
@@ -162,21 +187,34 @@
   <div class="wrap">
     <div class="section-head">
       <h2 class="section-title">관리자 화면 미리보기</h2>
-      <p class="section-sub">관리자 계정으로 로그인하면 설정 패널 안에 조직·사용자 관리 도구가 나타납니다.</p>
+      <p class="section-sub">관리자 계정으로 로그인하면 설정 패널 안에 조직·사용자 관리 도구가 나타납니다. 탭을 눌러 화면을 바꿔보세요.</p>
     </div>
-    <div class="gallery">
-      <figure>
-        <img src="docs/images/user-guide/settings-admin-dept.png" alt="부서 · 직급 관리" />
-        <figcaption>부서 · 직급 관리</figcaption>
-      </figure>
-      <figure>
-        <img src="docs/images/user-guide/settings-admin-users.png" alt="사용자 관리" />
-        <figcaption>사용자 관리 (직급 지정 · 비밀번호 초기화)</figcaption>
-      </figure>
-      <figure>
-        <img src="docs/images/user-guide/rooms-list.png" alt="채팅방 목록" />
-        <figcaption>채팅방 목록</figcaption>
-      </figure>
+
+    <div class="seg-control" role="tablist" id="admin-seg">
+      <button type="button" class="active" data-target="dept">부서 · 직급 관리</button>
+      <button type="button" data-target="users">사용자 관리</button>
+      <button type="button" data-target="rooms">채팅방 목록</button>
+    </div>
+
+    <div id="admin-panels">
+      <div class="seg-panel active" data-panel="dept">
+        <figure>
+          <img src="docs/images/user-guide/settings-admin-dept.png" alt="부서 · 직급 관리" />
+          <figcaption>부서·팀을 추가·이동·삭제하고, 순서를 조정합니다. 여기서 정리한 이름이 사용자 등록의 추천 목록에 그대로 쓰입니다.</figcaption>
+        </figure>
+      </div>
+      <div class="seg-panel" data-panel="users">
+        <figure>
+          <img src="docs/images/user-guide/settings-admin-users.png" alt="사용자 관리" />
+          <figcaption>조직도 트리에서 사용자를 골라 직급 지정, 비밀번호 초기화, 삭제를 합니다.</figcaption>
+        </figure>
+      </div>
+      <div class="seg-panel" data-panel="rooms">
+        <figure>
+          <img src="docs/images/user-guide/rooms-list.png" alt="채팅방 목록" />
+          <figcaption>아젠다(업무) 채팅방과 일반 채팅방을 구분해 보여줍니다.</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
@@ -197,7 +235,7 @@
           <li>알림(멘션 · 공지), 환경설정</li>
           <li>자주 묻는 질문(FAQ)</li>
         </ul>
-        <a class="go" href="user-guide.html">전체 가이드 보기 →</a>
+        <a class="btn btn-primary go" href="user-guide.html">전체 가이드 보기</a>
       </div>
       <div class="guide-card">
         <span class="tag">관리자용</span>
@@ -208,8 +246,35 @@
           <li>정기 유지보수 명령어</li>
           <li>트러블슈팅 체크리스트</li>
         </ul>
-        <a class="go" href="install-guide.html">전체 가이드 보기 →</a>
+        <a class="btn btn-outline go" href="install-guide.html">전체 가이드 보기</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">자주 묻는 질문</h2>
+      <p class="section-sub">더 많은 질문은 사용자 가이드의 FAQ 섹션에서 확인할 수 있습니다.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-row">
+        <summary>로그인이 안 돼요.<span class="plus">+</span></summary>
+        <p class="answer">아이디/비밀번호를 다시 확인하고, 그래도 안 되면 관리자에게 계정 상태 확인을 요청하세요.</p>
+      </details>
+      <details class="faq-row">
+        <summary>알림이 안 와요.<span class="plus">+</span></summary>
+        <p class="answer">Mac은 시스템 설정 → 알림에서 앱 알림 허용 여부를 확인하세요. Windows는 앱 내 알림 설정과 시스템 알림 설정을 함께 확인하세요.</p>
+      </details>
+      <details class="faq-row">
+        <summary>앱이 최신 버전으로 안 바뀌어요.<span class="plus">+</span></summary>
+        <p class="answer">앱을 완전히 종료했다가 다시 실행해 보세요. 실행 중 백그라운드로 새 버전을 받아 두었다가 재시작 시 적용됩니다.</p>
+      </details>
+      <details class="faq-row">
+        <summary>조직도에서 특정 부서에 아무도 안 보여요.<span class="plus">+</span></summary>
+        <p class="answer">"온라인" 필터가 켜져 있으면 접속 중인 사람이 없는 부서는 목록에서 숨겨집니다. 꺼서 전체 조직도를 확인하세요.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -220,15 +285,47 @@
     <p class="tagline">화면 캡처에 포함된 조직 구성원의 이름·이메일·연락처는 모두 모자이크(블러) 처리했습니다.</p>
     <div class="cols">
       <div class="links">
+        <span class="link-group-title">가이드</span>
         <a href="user-guide.html">사용자 가이드</a>
         <a href="install-guide.html">유지보수 가이드</a>
       </div>
       <div class="links">
+        <span class="link-group-title">바로가기</span>
+        <a href="#features">주요 기능</a>
+        <a href="#install">설치</a>
+        <a href="#admin">운영·유지보수</a>
+      </div>
+      <div class="links">
+        <span class="link-group-title">정보</span>
         <span>Made with Claude Code</span>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+  // Seamless marquee: pause on hover for readability
+  var track = document.getElementById('marquee-track');
+  if (track) {
+    track.addEventListener('mouseenter', function () { track.style.animationPlayState = 'paused'; });
+    track.addEventListener('mouseleave', function () { track.style.animationPlayState = 'running'; });
+  }
+
+  // Segmented control demo switcher
+  var seg = document.getElementById('admin-seg');
+  var panels = document.getElementById('admin-panels');
+  if (seg && panels) {
+    seg.addEventListener('click', function (e) {
+      var btn = e.target.closest('button');
+      if (!btn) return;
+      seg.querySelectorAll('button').forEach(function (b) { b.classList.toggle('active', b === btn); });
+      var target = btn.getAttribute('data-target');
+      panels.querySelectorAll('.seg-panel').forEach(function (p) {
+        p.classList.toggle('active', p.getAttribute('data-panel') === target);
+      });
+    });
+  }
+</script>
 
 </body>
 </html>

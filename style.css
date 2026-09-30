@@ -177,7 +177,7 @@ h2.section-title {
 }
 p.section-sub { color: var(--text-muted); font-size: 16px; margin: 0; }
 
-/* ---------- Feature grid ---------- */
+/* ---------- Feature grid (plain, used for ops summary) ---------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -196,6 +196,7 @@ p.section-sub { color: var(--text-muted); font-size: 16px; margin: 0; }
   overflow: hidden;
   background: var(--canvas-soft);
   padding: 10px 10px 0;
+  flex-shrink: 0;
 }
 .card .shot img {
   width: 100%;
@@ -210,6 +211,154 @@ p.section-sub { color: var(--text-muted); font-size: 16px; margin: 0; }
 .card h3 { margin: 0 0 6px; font-size: 18px; font-weight: 650; }
 .card p { margin: 0; font-size: 14px; color: var(--text-muted); }
 .card.text-only .body { padding: var(--sp-lg); }
+
+/* ---------- Bento feature grid ----------
+   Source screenshots are tall/portrait (phone-app shape), so "featured"
+   tiles are made TALLER (deeper image aspect-ratio), never wider —
+   a wide-short cell would badly letterbox a portrait screenshot.
+   align-items: start lets each card keep its own natural height
+   (masonry-like), instead of stretching short cards to match tall ones. */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-lg);
+  align-items: start;
+}
+.bento .card.feature-lg .shot { aspect-ratio: 3 / 4; }
+.bento .card.feature-lg h3 { font-size: 20px; }
+
+@media (max-width: 860px) {
+  .bento { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .bento { grid-template-columns: 1fr; }
+  .bento .card.feature-lg .shot { aspect-ratio: 16 / 11; }
+}
+
+/* ---------- Screenshot marquee ---------- */
+.marquee {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  padding: var(--sp-xl) 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-lg);
+  width: max-content;
+  animation: marquee-scroll 46s linear infinite;
+}
+.marquee-track img {
+  height: 320px;
+  width: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--hairline-soft);
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+@media (max-width: 640px) {
+  .marquee-track img { height: 220px; }
+}
+
+/* ---------- Split panel (install) ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--sp-xxl);
+  align-items: center;
+}
+.split-visual {
+  display: flex;
+  justify-content: center;
+}
+.split-visual .frame {
+  background: var(--canvas);
+  border: 1px solid var(--hairline-soft);
+  border-radius: var(--radius-md);
+  padding: var(--sp-sm);
+  transform: rotate(1.5deg);
+  box-shadow: none;
+}
+.split-visual .frame img {
+  border-radius: var(--radius-sm);
+  width: 260px;
+}
+@media (max-width: 860px) {
+  .split { grid-template-columns: 1fr; }
+  .split-visual { order: -1; }
+}
+
+/* ---------- Segmented control demo switcher ---------- */
+.seg-control {
+  display: inline-flex;
+  flex-wrap: wrap;
+  background: var(--canvas);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  gap: 2px;
+  margin-bottom: var(--sp-xl);
+}
+.seg-control button {
+  border: none;
+  background: transparent;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font);
+}
+.seg-control button.active { background: var(--ink); color: var(--on-primary); }
+.seg-panel { display: none; }
+.seg-panel.active { display: block; }
+.seg-panel figure { margin: 0; max-width: 480px; }
+.seg-panel img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--hairline-soft);
+}
+.seg-panel figcaption { margin-top: var(--sp-sm); font-size: 13.5px; color: var(--text-muted); }
+
+/* ---------- FAQ accordion ---------- */
+.faq-list { display: flex; flex-direction: column; gap: var(--sp-sm); }
+.faq-row {
+  background: var(--canvas);
+  border: 1px solid var(--hairline-soft);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-md) var(--sp-lg);
+}
+.faq-row summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-md);
+}
+.faq-row summary::-webkit-details-marker { display: none; }
+.faq-row summary .plus {
+  flex-shrink: 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text-muted);
+  width: 20px;
+  text-align: center;
+}
+.faq-row[open] summary .plus { transform: rotate(45deg); }
+.faq-row .answer { margin: var(--sp-sm) 0 0; color: var(--text-muted); font-size: 14px; }
 
 /* ---------- Guide cards ---------- */
 .guide-cards {
@@ -340,7 +489,8 @@ footer.site-footer .cols {
 }
 footer.site-footer a { color: var(--text-faint); text-decoration: none; }
 footer.site-footer a:hover { color: var(--on-primary); }
-footer.site-footer .links { display: flex; gap: var(--sp-lg); font-size: 13px; }
+footer.site-footer .links { display: flex; flex-direction: column; gap: 10px; font-size: 13px; }
+footer.site-footer .link-group-title { color: var(--on-primary); font-weight: 650; font-size: 13px; margin-bottom: 4px; }
 
 @media (max-width: 640px) {
   .nav-links a:not(.btn) { display: none; }
@@ -350,9 +500,46 @@ footer.site-footer .links { display: flex; gap: var(--sp-lg); font-size: 13px; }
    Markdown viewer page
    ============================================================ */
 body.viewer .wrap.doc {
-  max-width: 760px;
+  max-width: 1080px;
   padding-top: var(--sp-xxl);
   padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: minmax(0, 720px) 220px;
+  gap: var(--sp-xxl);
+  align-items: start;
+}
+.doc-main { min-width: 0; }
+.doc-toc {
+  position: sticky;
+  top: 100px;
+  font-size: 13px;
+}
+.doc-toc .toc-label {
+  font-weight: 650;
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-bottom: var(--sp-sm);
+}
+.doc-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-left: 1px solid var(--hairline);
+}
+.doc-toc a {
+  display: block;
+  padding: 2px 0 2px 14px;
+  color: var(--text-muted);
+  text-decoration: none;
+  line-height: 1.4;
+}
+.doc-toc a:hover { color: var(--ink); }
+@media (max-width: 900px) {
+  body.viewer .wrap.doc { grid-template-columns: 1fr; }
+  .doc-toc { display: none; }
 }
 .back-pill {
   display: inline-flex;
