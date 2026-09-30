@@ -5,43 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CSIN-Tech 메신저 가이드</title>
 <meta name="description" content="CSIN-Tech 메신저 설치·유지보수 가이드와 사용자 가이드를 한 곳에서 확인하세요." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;450;600;650&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <nav class="nav">
-  <div class="wrap">
-    <div class="nav-brand"><span class="dot"></span> CSIN-Tech 메신저 가이드</div>
+  <div class="nav-pill">
+    <a class="nav-brand" href="index.html"><span class="dot"></span> CSIN-Tech 메신저</a>
     <div class="nav-links">
       <a href="#features">주요 기능</a>
       <a href="#install">설치</a>
       <a href="#admin">운영·유지보수</a>
-      <a href="user-guide.html">사용자 가이드</a>
-      <a href="install-guide.html">유지보수 가이드</a>
+      <a class="btn btn-primary" href="user-guide.html">사용자 가이드</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">CSIN-Tech MESSENGER</span>
-    <h1>회사용 데스크톱 메신저,<br />설치부터 사용법까지 한 곳에서</h1>
+    <span class="eyebrow">CSIN-Tech 메신저</span>
+    <h1>회사용 데스크톱 메신저,<br />설치부터 사용법까지 한 곳에서.</h1>
     <p class="lead">
       Electron 기반 사내 메신저입니다. 조직도로 동료를 찾아 바로 대화를 시작하고,
       쪽지·일정·메모장·공지사항까지 하나의 앱에서 사용합니다.
-      아래에서 사용자 가이드와 설치·운영 가이드를 확인하세요.
     </p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="user-guide.html">📘 사용자 가이드 보기</a>
-      <a class="btn btn-ghost" href="install-guide.html">🛠 설치·유지보수 가이드 보기</a>
+      <a class="btn btn-primary" href="user-guide.html">사용자 가이드 보기</a>
+      <a class="btn btn-outline" href="install-guide.html">설치·유지보수 가이드 보기</a>
     </div>
   </div>
 </header>
 
 <section id="features">
   <div class="wrap">
-    <h2 class="section-title">주요 기능</h2>
-    <p class="section-sub">로그인 후 왼쪽 사이드바에서 바로 접근할 수 있는 핵심 기능입니다.</p>
+    <div class="section-head">
+      <h2 class="section-title">주요 기능</h2>
+      <p class="section-sub">로그인 후 왼쪽 사이드바에서 바로 접근할 수 있는 핵심 기능입니다.</p>
+    </div>
     <div class="grid">
 
       <div class="card">
@@ -98,12 +101,14 @@
 
 <section class="alt" id="install">
   <div class="wrap">
-    <h2 class="section-title">설치하기</h2>
-    <p class="section-sub">회사에서 안내한 다운로드 링크에서 설치 파일을 받아 실행하면 됩니다.</p>
+    <div class="section-head">
+      <h2 class="section-title">설치하기</h2>
+      <p class="section-sub">회사에서 안내한 다운로드 링크에서 설치 파일을 받아 실행하면 됩니다.</p>
+    </div>
     <div class="steps">
       <div class="step">
         <div class="num">1</div>
-        <div class="txt"><b>Mac</b> — <code>.dmg</code> 파일을 다운로드한 후 열어서 앱을 <b>Applications</b> 폴더로 드래그하세요.</div>
+        <div class="txt"><b>Mac</b> — <code>.dmg</code> 파일을 다운로드한 후 열어서 앱을 Applications 폴더로 드래그하세요.</div>
       </div>
       <div class="step">
         <div class="num">2</div>
@@ -118,43 +123,47 @@
       <b>macOS에서 "손상되었기 때문에 열 수 없습니다" 경고가 뜰 때</b><br />
       아직 앱 서명이 적용되지 않아 나타나는 정상적인 경고입니다. 터미널에서
       <code>xattr -cr /Applications/앱이름.app</code> 를 실행한 뒤 다시 실행하면 됩니다.
-      자세한 내용은 <a href="user-guide.html#설치-및-제거">사용자 가이드</a>를 참고하세요.
+      자세한 내용은 <a href="user-guide.html">사용자 가이드</a>를 참고하세요.
     </div>
   </div>
 </section>
 
 <section id="admin">
   <div class="wrap">
-    <h2 class="section-title">운영·유지보수 한눈에 보기</h2>
-    <p class="section-sub">서버 설치, 클라이언트 빌드·배포, 자동 업데이트, 장애 대응까지 관리자가 알아야 할 내용을 정리했습니다.</p>
+    <div class="section-head">
+      <h2 class="section-title">운영·유지보수 한눈에 보기</h2>
+      <p class="section-sub">서버 설치, 클라이언트 빌드·배포, 자동 업데이트, 장애 대응까지 관리자가 알아야 할 내용을 정리했습니다.</p>
+    </div>
     <div class="grid">
-      <div class="card"><div class="body">
+      <div class="card text-only"><div class="body">
         <h3>서버 (API + PostgreSQL)</h3>
         <p>Docker Compose로 DB·API 서버를 한 번에 실행합니다. LDAP 연동, 거래처 조직 동기화 등 선택 기능을 지원합니다.</p>
       </div></div>
-      <div class="card"><div class="body">
+      <div class="card text-only"><div class="body">
         <h3>클라이언트 빌드·배포</h3>
         <p>macOS(.dmg)/Windows(.exe) 설치 파일을 빌드해 GitHub Releases로 배포합니다. 설치된 앱은 자동으로 최신 버전을 내려받습니다.</p>
       </div></div>
-      <div class="card"><div class="body">
+      <div class="card text-only"><div class="body">
         <h3>사용자·조직 관리</h3>
         <p>관리자 계정은 설정 패널에서 사용자 등록, 부서·직급 관리, 비밀번호 초기화를 바로 처리할 수 있습니다.</p>
       </div></div>
-      <div class="card"><div class="body">
+      <div class="card text-only"><div class="body">
         <h3>장애 대응</h3>
         <p>흰 화면, 알림 미수신, DB 연결 오류 등 자주 발생하는 문제와 점검 방법을 정리했습니다.</p>
       </div></div>
     </div>
     <div class="cta-row" style="margin-top:28px; justify-content:flex-start;">
-      <a class="btn btn-primary" href="install-guide.html">🛠 설치·유지보수 가이드 전체 보기</a>
+      <a class="btn btn-primary" href="install-guide.html">설치·유지보수 가이드 전체 보기</a>
     </div>
   </div>
 </section>
 
 <section class="alt">
   <div class="wrap">
-    <h2 class="section-title">관리자 화면 미리보기</h2>
-    <p class="section-sub">관리자 계정으로 로그인하면 설정 패널 안에 조직·사용자 관리 도구가 나타납니다.</p>
+    <div class="section-head">
+      <h2 class="section-title">관리자 화면 미리보기</h2>
+      <p class="section-sub">관리자 계정으로 로그인하면 설정 패널 안에 조직·사용자 관리 도구가 나타납니다.</p>
+    </div>
     <div class="gallery">
       <figure>
         <img src="docs/images/user-guide/settings-admin-dept.png" alt="부서 · 직급 관리" />
@@ -174,12 +183,14 @@
 
 <section>
   <div class="wrap">
-    <h2 class="section-title">가이드 문서</h2>
-    <p class="section-sub">더 자세한 내용은 아래 두 가이드에서 확인하세요.</p>
+    <div class="section-head">
+      <h2 class="section-title">가이드 문서</h2>
+      <p class="section-sub">더 자세한 내용은 아래 두 가이드에서 확인하세요.</p>
+    </div>
     <div class="guide-cards">
       <div class="guide-card">
         <span class="tag">직원용</span>
-        <h3>📘 사용자 가이드</h3>
+        <h3>사용자 가이드</h3>
         <ul>
           <li>설치 및 로그인</li>
           <li>조직도 · 대화 · 쪽지 · 일정 · 메모장</li>
@@ -190,7 +201,7 @@
       </div>
       <div class="guide-card">
         <span class="tag">관리자용</span>
-        <h3>🛠 설치 · 유지보수 가이드</h3>
+        <h3>설치 · 유지보수 가이드</h3>
         <ul>
           <li>서버 최초 설치 및 환경 변수</li>
           <li>클라이언트 빌드 · 배포 · 자동 업데이트</li>
@@ -203,10 +214,19 @@
   </div>
 </section>
 
-<footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; width:100%;">
-    <span>CSIN-Tech 메신저 가이드 · 화면 캡처의 조직·개인 정보는 모자이크 처리했습니다.</span>
-    <span>Made with Claude Code</span>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="wordmark">CSIN-Tech 메신저</div>
+    <p class="tagline">화면 캡처에 포함된 조직 구성원의 이름·이메일·연락처는 모두 모자이크(블러) 처리했습니다.</p>
+    <div class="cols">
+      <div class="links">
+        <a href="user-guide.html">사용자 가이드</a>
+        <a href="install-guide.html">유지보수 가이드</a>
+      </div>
+      <div class="links">
+        <span>Made with Claude Code</span>
+      </div>
+    </div>
   </div>
 </footer>
 
